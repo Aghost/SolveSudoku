@@ -11,16 +11,16 @@ namespace SudokuSolver.Logics
   {
     public int[][] Solve(int[][] sudoku)
     {
-      int[][] solved = sudoku;
+			int[][] solved = sudoku;
 
-      SolveSudoku(solved);
+			SolveSudoku(solved);
 
-      return (solved);
+			return (solved);
     }
 
 		static bool SolveSudoku(int[][] board)
 		{
-    	int row = -1;
+			int row = -1;
 			int col = -1;
 			bool isEmpty = true;
 
@@ -81,9 +81,8 @@ namespace SudokuSolver.Logics
 			return true;
 		}
 
-
 		public int[][] Create(int[][] sudoku)
     {
-            return sudoku;
+			return sudoku;
     }
 }
