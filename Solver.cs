@@ -7,16 +7,16 @@ using System.Web;
 
 namespace SudokuSolver.Logics
 {
-  public class Solver
-  {
-    public int[][] Solve(int[][] sudoku)
-    {
+	public class Solver
+	{
+		public int[][] Solve(int[][] sudoku)
+		{
 			int[][] solved = sudoku;
 
 			SolveSudoku(solved);
 
 			return (solved);
-    }
+		}
 
 		static bool SolveSudoku(int[][] board)
 		{
@@ -45,7 +45,7 @@ namespace SudokuSolver.Logics
 			if (isEmpty)    //no 0s left
 				return true;
 
-		  Random r = new Random();
+			Random r = new Random();
 			int[] shuffled = Enumerable.Range(1, 9).Reverse().OrderBy(r.Next).ToArray();
 
 			for (int num = 1; num <= 9; num++)
@@ -64,7 +64,7 @@ namespace SudokuSolver.Logics
 			return false;
 		}
     
-    private static bool IsSafe(int[][] board, int row, int col, int num)
+		private static bool IsSafe(int[][] board, int row, int col, int num)
 		{
 			for (int i = 0; i < 9; i++)
 				if (board[row][i] == num || board[i][col] == num)
@@ -81,6 +81,8 @@ namespace SudokuSolver.Logics
 			return true;
 		}
 
+		
+		
 		public int[][] Create(int[][] sudoku)
     {
 			return sudoku;
