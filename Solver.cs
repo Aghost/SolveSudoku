@@ -40,6 +40,9 @@ namespace SudokuSolver.Logics
 					if (!isEmpty)
 						break;
 				}
+				
+				if (!isEmpty)
+					break;
 			}
 
 			if (isEmpty)    //no 0s left
