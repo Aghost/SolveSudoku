@@ -46,7 +46,7 @@ namespace SudokuSolver.Logics
 				return true;
 
 			Random r = new Random();
-			int[] shuffled = Enumerable.Range(1, 9).Reverse().OrderBy(r.Next).ToArray();
+			int[] shuffled = Enumerable.Range(1, 9).OrderBy(r.Next).ToArray();
 
 			for (int num = 1; num <= 9; num++)
 			{
